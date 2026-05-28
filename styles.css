@@ -304,6 +304,13 @@ h2 {
   font-weight: 900;
 }
 
+.icon-link.disabled {
+  border-color: var(--line);
+  color: var(--muted);
+  cursor: default;
+  opacity: 0.55;
+}
+
 .hosts {
   border-top: 1px solid var(--line);
 }
