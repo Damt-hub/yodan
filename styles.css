@@ -304,6 +304,84 @@ h2 {
   font-weight: 900;
 }
 
+.hosts {
+  border-top: 1px solid var(--line);
+}
+
+.host-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.host-card {
+  display: grid;
+  gap: 10px;
+  padding: 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgba(20, 28, 24, 0.08);
+}
+
+.host-avatar {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--coral);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.host-card:nth-child(2) .host-avatar {
+  background: var(--teal);
+}
+
+.host-card:nth-child(3) .host-avatar {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.host-role {
+  margin: 8px 0 0;
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.host-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.host-card p:not(.host-role) {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.host-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.host-socials a {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
@@ -545,6 +623,10 @@ h2 {
 
   .topic-board,
   .platforms {
+    grid-template-columns: 1fr;
+  }
+
+  .host-list {
     grid-template-columns: 1fr;
   }
 
