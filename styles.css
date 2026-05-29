@@ -294,14 +294,47 @@ h2 {
   color: var(--muted);
 }
 
+.episode-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .icon-link {
   display: grid;
   width: 46px;
   height: 46px;
   place-items: center;
-  border: 2px solid var(--ink);
+  border: 2px solid currentColor;
   border-radius: 50%;
+  color: var(--ink);
   font-weight: 900;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.icon-link svg {
+  display: block;
+}
+
+a.icon-link.spotify {
+  color: #1db954;
+}
+
+a.icon-link.apple {
+  color: #9933cc;
+}
+
+a.icon-link.amazon {
+  color: #1ad1e3;
+}
+
+a.icon-link.youtube {
+  color: #ff0000;
+}
+
+a.icon-link:hover {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  transform: translateY(-2px);
 }
 
 .icon-link.disabled {
@@ -623,7 +656,7 @@ h2 {
     grid-template-columns: auto 1fr;
   }
 
-  .icon-link {
+  .episode-links {
     grid-column: 2;
     justify-self: start;
   }
