@@ -487,13 +487,19 @@ a.icon-link:hover {
 
 .platforms a,
 .platform-pending {
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   min-height: 58px;
-  place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   font-weight: 900;
+}
+
+.platforms a svg {
+  flex: 0 0 auto;
 }
 
 .platform-pending {
