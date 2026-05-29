@@ -296,20 +296,21 @@ h2 {
 
 .episode-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
 }
 
 .icon-link {
   display: grid;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   place-items: center;
-  border: 2px solid currentColor;
+  border: 3px solid #ffffff;
   border-radius: 50%;
-  color: var(--ink);
-  font-weight: 900;
-  transition: transform 140ms ease, background 140ms ease;
+  color: #ffffff;
+  background: var(--ink);
+  box-shadow: 0 8px 16px rgba(20, 28, 24, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .icon-link svg {
@@ -317,31 +318,32 @@ h2 {
 }
 
 a.icon-link.spotify {
-  color: #1db954;
+  background: #1db954;
 }
 
 a.icon-link.apple {
-  color: #9933cc;
+  background: #9933cc;
 }
 
 a.icon-link.amazon {
-  color: #1ad1e3;
+  background: #1ad1e3;
 }
 
 a.icon-link.youtube {
-  color: #ff0000;
+  background: #ff0000;
 }
 
 a.icon-link:hover {
-  background: color-mix(in srgb, currentColor 14%, transparent);
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.08) rotate(-4deg);
+  box-shadow: 0 12px 20px rgba(20, 28, 24, 0.26);
 }
 
 .icon-link.disabled {
-  border-color: var(--line);
   color: var(--muted);
+  background: #ece9e1;
+  box-shadow: none;
   cursor: default;
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
 .hosts {
@@ -657,7 +659,7 @@ a.icon-link:hover {
   }
 
   .episode-links {
-    grid-column: 2;
+    grid-column: 1 / -1;
     justify-self: start;
   }
 
