@@ -489,9 +489,10 @@ a.icon-link:hover {
 .platform-pending {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 12px;
   min-height: 58px;
+  padding: 0 18px;
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
@@ -500,6 +501,10 @@ a.icon-link:hover {
 
 .platforms a svg {
   flex: 0 0 auto;
+}
+
+.platforms a span {
+  white-space: nowrap;
 }
 
 .platform-pending {
