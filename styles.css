@@ -443,6 +443,10 @@ h2 {
   line-height: 1.45;
 }
 
+.episode-card h3 a:hover {
+  text-decoration: underline;
+}
+
 .episode-card p {
   margin: 6px 0 0;
   color: var(--muted);
